@@ -1,0 +1,191 @@
+.dashboard {
+  width: 100%;
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.welcome-section h3 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #1e293b;
+}
+
+.welcome-section p {
+  color: #64748b;
+  margin: 0;
+}
+
+.date-label {
+  background: white;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.stat-card,
+.dashboard-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  height: 100%;
+}
+
+.stat-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-card p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.blue {
+  color: #2563eb;
+  background: #dbeafe;
+}
+
+.purple {
+  color: #9333ea;
+  background: #f3e8ff;
+}
+
+.green {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+.orange {
+  color: #ea580c;
+  background: #ffedd5;
+}
+
+.change {
+  color: #16a34a;
+  font-size: 12px;
+}
+
+.dashboard-card h5 {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.information-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+.information-row strong {
+  color: #334155;
+}
+
+.status {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.attendance-box {
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.progress {
+  height: 9px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background: #2563eb;
+}
+
+.activity {
+  display: flex;
+  gap: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.activity:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  background: #dbeafe;
+  color: #2563eb;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.activity strong {
+  font-size: 14px;
+  color: #334155;
+}
+
+.activity p {
+  font-size: 13px;
+  margin: 3px 0;
+  color: #64748b;
+}
+
+.activity small {
+  color: #94a3b8;
+}
+
+@media (max-width: 576px) {
+
+  .welcome-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stat-card,
+  .dashboard-card {
+    padding: 16px;
+  }
+
+}

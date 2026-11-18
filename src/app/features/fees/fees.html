@@ -1,0 +1,68 @@
+<div class="page-container">
+  <div class="page-heading">
+    <div>
+      <h3>Fees Management</h3>
+      <p>Manage student fee payments and records</p>
+    </div>
+    <button class="btn btn-primary">
+      <i class="bi bi-plus-lg"></i> Add Payment
+    </button>
+  </div>
+
+  <div class="fees-summary">
+    <div class="summary-card">
+      <span>Total Fees</span>
+      <h3>{{ totalFees | currency:'INR':'symbol':'1.0-0' }}</h3>
+      <i class="bi bi-wallet2"></i>
+    </div>
+
+    <div class="summary-card">
+      <span>Collected Fees</span>
+      <h3>{{ paidFees | currency:'INR':'symbol':'1.0-0' }}</h3>
+      <i class="bi bi-cash-coin"></i>
+    </div>
+
+    <div class="summary-card">
+      <span>Pending Fees</span>
+      <h3>{{ pendingFees | currency:'INR':'symbol':'1.0-0' }}</h3>
+      <i class="bi bi-hourglass-split"></i>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h5>Fee Records</h5>
+    <p class="text-muted">Student payment details</p>
+
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Class</th>
+            <th>Amount</th>
+            <th>Payment Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fee of fees">
+            <td>{{ fee.id }}</td>
+            <td class="name-cell">{{ fee.student }}</td>
+            <td>{{ fee.class }}</td>
+            <td class="amount-cell">
+              {{ fee.amount | currency:'INR':'symbol':'1.0-0' }}
+            </td>
+            <td>{{ fee.date }}</td>
+            <td>
+              <span class="status-badge"
+                [ngClass]="fee.status === 'Paid' ? 'paid' : 'pending'">
+                {{ fee.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

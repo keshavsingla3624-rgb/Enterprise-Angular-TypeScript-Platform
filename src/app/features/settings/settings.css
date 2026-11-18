@@ -1,0 +1,141 @@
+.page-container {
+  width: 100%;
+}
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.page-heading h3 {
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.page-heading p {
+  color: #64748b;
+  margin: 0;
+}
+
+.content-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.section-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 21px;
+}
+
+.section-heading h5 {
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.section-heading p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.settings-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  padding: 11px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #334155;
+  background: #f8fafc;
+  font-size: 14px;
+}
+
+.settings-note {
+  color: #64748b;
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin: 22px 0 0;
+}
+
+.settings-note i {
+  color: #2563eb;
+  margin-right: 5px;
+}
+
+.preference-card {
+  margin-top: 20px;
+}
+
+.preference-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.preference-row:last-child {
+  border-bottom: none;
+}
+
+.preference-row strong {
+  color: #334155;
+  font-size: 14px;
+}
+
+.preference-row p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+.preference-value {
+  color: #2563eb;
+  background: #dbeafe;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .settings-form {
+    grid-template-columns: 1fr;
+  }
+
+  .preference-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

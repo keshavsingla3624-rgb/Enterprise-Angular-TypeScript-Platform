@@ -1,0 +1,59 @@
+<div class="page-container">
+  <div class="page-heading">
+    <div>
+      <h3>Teachers</h3>
+      <p>Manage teacher profiles and information</p>
+    </div>
+    <button class="btn btn-primary">
+      <i class="bi bi-plus-lg"></i> Add Teacher
+    </button>
+  </div>
+
+  <div class="teacher-summary">
+    <div class="summary-card">
+      <span>Total Teachers</span>
+      <h3>{{ teachers.length }}</h3>
+      <i class="bi bi-person-workspace"></i>
+    </div>
+    <div class="summary-card">
+      <span>Active Teachers</span>
+      <h3>{{ teachers.length - 1 }}</h3>
+      <i class="bi bi-person-check"></i>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h5>Teacher Records</h5>
+    <p class="text-muted">Registered teaching staff</p>
+
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Teacher Name</th>
+            <th>Subject</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let teacher of teachers">
+            <td>{{ teacher.id }}</td>
+            <td class="name-cell">{{ teacher.name }}</td>
+            <td>{{ teacher.subject }}</td>
+            <td>{{ teacher.email }}</td>
+            <td>{{ teacher.phone }}</td>
+            <td>
+              <span class="status-badge"
+                [ngClass]="teacher.status === 'Active' ? 'active' : 'inactive'">
+                {{ teacher.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

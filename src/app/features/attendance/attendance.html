@@ -1,0 +1,64 @@
+<div class="page-container">
+  <div class="page-heading">
+    <div>
+      <h3>Attendance</h3>
+      <p>Monitor and manage daily student attendance</p>
+    </div>
+    <span class="date-label">
+      <i class="bi bi-calendar3"></i> 18 November 2026
+    </span>
+  </div>
+
+  <div class="attendance-summary">
+    <div class="summary-card">
+      <span>Total Students</span>
+      <h3>{{ attendanceRecords.length }}</h3>
+      <i class="bi bi-people"></i>
+    </div>
+
+    <div class="summary-card">
+      <span>Present</span>
+      <h3>{{ presentCount }}</h3>
+      <i class="bi bi-person-check"></i>
+    </div>
+
+    <div class="summary-card">
+      <span>Absent</span>
+      <h3>{{ absentCount }}</h3>
+      <i class="bi bi-person-x"></i>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h5>Daily Attendance Records</h5>
+    <p class="text-muted">Student attendance for today</p>
+
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Class</th>
+            <th>Date</th>
+            <th>Attendance Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of attendanceRecords">
+            <td>{{ record.id }}</td>
+            <td class="name-cell">{{ record.name }}</td>
+            <td>{{ record.class }}</td>
+            <td>{{ record.date }}</td>
+            <td>
+              <span class="status-badge"
+                [ngClass]="record.status.toLowerCase()">
+                {{ record.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
