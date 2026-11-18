@@ -1,4 +1,3 @@
-
 name: Deploy Angular School ERP
 
 on:
@@ -39,8 +38,8 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/school-erp
-
+          path: dist/school-erp/browser
+          
   deploy:
     runs-on: ubuntu-latest
     needs: build
